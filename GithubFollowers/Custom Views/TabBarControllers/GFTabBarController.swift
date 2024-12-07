@@ -45,3 +45,8 @@ class GFTabBarController: UITabBarController {
         return UINavigationController(rootViewController: favoritesVC)
     }
 }
+
+@available(iOS 17, *)
+#Preview {
+    GFTabBarController()
+}

@@ -49,3 +49,11 @@ class FollowerCell: UICollectionViewCell {
     }
      
 }
+
+@available(iOS 17, *)
+#Preview {
+    let mockFollower = Follower(login: "mockuser", avatarUrl: "https://avatars.githubusercontent.com/u/33833?v=4")
+    let cell = FavoriteCell(style: .default, reuseIdentifier: FavoriteCell.reuseUID)
+    cell.set(favorite: mockFollower)
+    return cell
+}
