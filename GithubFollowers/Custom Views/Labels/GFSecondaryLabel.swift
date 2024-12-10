@@ -32,3 +32,9 @@ class GFSecondaryLabel: UILabel {
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
+
+@available(iOS 17, *)
+#Preview {
+    GFSecondaryLabel(fontSize: 32)
+}
+
