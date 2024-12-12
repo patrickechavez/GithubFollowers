@@ -9,8 +9,11 @@ import UIKit
 
 class FavoritesListVC: GFDataLoadingVC {
     
+    var viewModel: FavoritesListViewModel!
+    
     let tableView                = UITableView()
     var favorites: [Follower]    = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,9 +86,10 @@ extension FavoritesListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let favorite     = favorites[indexPath.row]
-        let destVC       = FollowerListVC(username: favorite.login)
+        viewModel.goToFollowersList(username: favorite.login)
+        //let destVC       = FollowerListVC(username: favorite.login)
         
-        navigationController?.pushViewController(destVC, animated: true)
+        //navigationController?.pushViewController(destVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

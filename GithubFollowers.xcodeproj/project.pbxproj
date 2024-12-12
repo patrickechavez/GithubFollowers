@@ -43,6 +43,13 @@
 		2DC939D02D028BD500D6E777 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC939CC2D028BD500D6E777 /* GFError.swift */; };
 		2DC939D12D028BD500D6E777 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC939CD2D028BD500D6E777 /* UIHelper.swift */; };
 		2DC939D32D028C6700D6E777 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC939D22D028C6700D6E777 /* Assets.xcassets */; };
+		2DEB5CBA2D0874FC00F28D30 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB5CB92D0874FC00F28D30 /* AppCoordinator.swift */; };
+		2DEB5CC02D08769700F28D30 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB5CBF2D08769700F28D30 /* SearchViewModel.swift */; };
+		2DEB5CC22D0876A200F28D30 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB5CC12D0876A200F28D30 /* SearchCoordinator.swift */; };
+		2DEB5CC42D0886C000F28D30 /* FollowerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB5CC32D0886C000F28D30 /* FollowerListViewModel.swift */; };
+		2DEB5CC62D0886C800F28D30 /* FollowerlistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB5CC52D0886C800F28D30 /* FollowerlistCoordinator.swift */; };
+		2DEB5CC82D08B45600F28D30 /* FavoritesListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB5CC72D08B45600F28D30 /* FavoritesListCoordinator.swift */; };
+		2DEB5CCA2D08B45D00F28D30 /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB5CC92D08B45D00F28D30 /* FavoritesListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +91,13 @@
 		2DC939CC2D028BD500D6E777 /* GFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
 		2DC939CD2D028BD500D6E777 /* UIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		2DC939D22D028C6700D6E777 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DEB5CB92D0874FC00F28D30 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2DEB5CBF2D08769700F28D30 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		2DEB5CC12D0876A200F28D30 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		2DEB5CC32D0886C000F28D30 /* FollowerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListViewModel.swift; sourceTree = "<group>"; };
+		2DEB5CC52D0886C800F28D30 /* FollowerlistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerlistCoordinator.swift; sourceTree = "<group>"; };
+		2DEB5CC72D08B45600F28D30 /* FavoritesListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListCoordinator.swift; sourceTree = "<group>"; };
+		2DEB5CC92D08B45D00F28D30 /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,10 +270,10 @@
 		2DC939BC2D028BC400D6E777 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				2DC939B82D028BC400D6E777 /* FavoritesListVC.swift */,
-				2DC939B92D028BC400D6E777 /* FollowerListVC.swift */,
-				2DC939BA2D028BC400D6E777 /* SearchVC.swift */,
-				2DC939BB2D028BC400D6E777 /* UserInfoVC.swift */,
+				2DEB5CBD2D08759000F28D30 /* Search */,
+				2DEB5CBC2D08758800F28D30 /* Followers */,
+				2DEB5CBB2D08757000F28D30 /* Favorites */,
+				2DEB5CBE2D0875A000F28D30 /* UserInfo */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -267,6 +281,7 @@
 		2DC939C62D028BCE00D6E777 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				2DEB5CB92D0874FC00F28D30 /* AppCoordinator.swift */,
 				2DC939C12D028BCE00D6E777 /* AppDelegate.swift */,
 				2DC939C42D028BCE00D6E777 /* LaunchScreen.storyboard */,
 				2DC939C52D028BCE00D6E777 /* SceneDelegate.swift */,
@@ -283,6 +298,44 @@
 				2DC939CD2D028BD500D6E777 /* UIHelper.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2DEB5CBB2D08757000F28D30 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB5CC72D08B45600F28D30 /* FavoritesListCoordinator.swift */,
+				2DEB5CC92D08B45D00F28D30 /* FavoritesListViewModel.swift */,
+				2DC939B82D028BC400D6E777 /* FavoritesListVC.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		2DEB5CBC2D08758800F28D30 /* Followers */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB5CC52D0886C800F28D30 /* FollowerlistCoordinator.swift */,
+				2DEB5CC32D0886C000F28D30 /* FollowerListViewModel.swift */,
+				2DC939B92D028BC400D6E777 /* FollowerListVC.swift */,
+			);
+			path = Followers;
+			sourceTree = "<group>";
+		};
+		2DEB5CBD2D08759000F28D30 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB5CC12D0876A200F28D30 /* SearchCoordinator.swift */,
+				2DEB5CBF2D08769700F28D30 /* SearchViewModel.swift */,
+				2DC939BA2D028BC400D6E777 /* SearchVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2DEB5CBE2D0875A000F28D30 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				2DC939BB2D028BC400D6E777 /* UserInfoVC.swift */,
+			);
+			path = UserInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,13 +414,16 @@
 				2DC939962D028B9B00D6E777 /* FavoriteCell.swift in Sources */,
 				2DC939B22D028BB700D6E777 /* PersistenceManager.swift in Sources */,
 				2DC939CA2D028BCE00D6E777 /* SceneDelegate.swift in Sources */,
+				2DEB5CC02D08769700F28D30 /* SearchViewModel.swift in Sources */,
 				2DC939A52D028B9B00D6E777 /* GFEmptyStateView.swift in Sources */,
 				2DC939952D028B9B00D6E777 /* GFButton.swift in Sources */,
 				2DC939AC2D028BA800D6E777 /* String+Ext.swift in Sources */,
 				2DC939D02D028BD500D6E777 /* GFError.swift in Sources */,
 				2DC939A22D028B9B00D6E777 /* GFDataLoadingVC.swift in Sources */,
+				2DEB5CC82D08B45600F28D30 /* FavoritesListCoordinator.swift in Sources */,
 				2DC939B62D028BBD00D6E777 /* Follower.swift in Sources */,
 				2DC939982D028B9B00D6E777 /* GFAvatarImageView.swift in Sources */,
+				2DEB5CCA2D08B45D00F28D30 /* FavoritesListViewModel.swift in Sources */,
 				2DC939BE2D028BC400D6E777 /* FollowerListVC.swift in Sources */,
 				2DC9399A2D028B9B00D6E777 /* GFSecondaryLabel.swift in Sources */,
 				2DC939A12D028B9B00D6E777 /* GFAlertVC.swift in Sources */,
@@ -382,10 +438,14 @@
 				2DC939CF2D028BD500D6E777 /* Constants.swift in Sources */,
 				2DC939B72D028BBD00D6E777 /* User.swift in Sources */,
 				2DC939A62D028B9B00D6E777 /* GFItemInfoView.swift in Sources */,
+				2DEB5CC62D0886C800F28D30 /* FollowerlistCoordinator.swift in Sources */,
+				2DEB5CBA2D0874FC00F28D30 /* AppCoordinator.swift in Sources */,
 				2DC939AB2D028BA800D6E777 /* Date+Ext.swift in Sources */,
 				2DC9399D2D028B9B00D6E777 /* GFTextField.swift in Sources */,
+				2DEB5CC22D0876A200F28D30 /* SearchCoordinator.swift in Sources */,
 				2DC939A42D028B9B00D6E777 /* GFAlertContainerView.swift in Sources */,
 				2DC939B12D028BB700D6E777 /* NetworkManager.swift in Sources */,
+				2DEB5CC42D0886C000F28D30 /* FollowerListViewModel.swift in Sources */,
 				2DC939BD2D028BC400D6E777 /* FavoritesListVC.swift in Sources */,
 				2DC9399C2D028B9B00D6E777 /* GFTabBarController.swift in Sources */,
 				2DC939A32D028B9B00D6E777 /* GFUserInfoHeaderVC.swift in Sources */,
@@ -537,8 +597,9 @@
 				INFOPLIST_FILE = GithubFollowers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -564,8 +625,9 @@
 				INFOPLIST_FILE = GithubFollowers/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

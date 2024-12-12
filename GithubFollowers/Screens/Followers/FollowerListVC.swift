@@ -21,18 +21,10 @@ class FollowerListVC: GFDataLoadingVC {
     var isSearching = false
     var isLoadingMoreFollowers = false
     
+    var viewModel: FollowerListViewModel!
+    
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
-    
-    init(username: String) {
-        super.init(nibName: nil, bundle: nil)
-        self.username   = username
-        self.title      = username
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,37 +71,7 @@ class FollowerListVC: GFDataLoadingVC {
     func getFollowers(username: String, page: Int) {
         showLoadingView()
         isLoadingMoreFollowers = true
-        
-        
-        Task {
-            
-            /*
-             *for iOS 15 and above
-            guard let followers = try? await  NetworkManager.shared.getFollowers(for: username, page: page) else {
-                presentDefaultError()
-                dissmissLoadingView()
-                return
-            }
-             */
-            
-            //if you want to displa a specific error
-            do {
-                let followers =  try await NetworkManager.shared.getFollowers(for: username, page: page)
-                updateUI(with: followers)
-                dissmissLoadingView()
-            } catch {
-                if let gfError = error as? GFError {
-                    presentGFAlert(title: "Bad Stuff Happened", message: gfError.rawValue, buttonTitle: "Ok")
-                }else {
-                    presentDefaultError()
-                }
-                
-                dissmissLoadingView()
-            }
-            
-        }
 
-        /* for iOS 13
         NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result  in
             guard let self  = self else { return }
             self.dissmissLoadingView()
@@ -123,7 +85,7 @@ class FollowerListVC: GFDataLoadingVC {
             
             self.isLoadingMoreFollowers = false
         }
-        */
+        
     }
     
     private func updateUI(with followers: [Follower]) {

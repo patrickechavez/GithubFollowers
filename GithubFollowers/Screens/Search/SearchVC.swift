@@ -13,6 +13,8 @@ class SearchVC: UIViewController {
     let usernameTextField   = GFTextField()
     let callToActionButton  = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
+    var viewModel: SearchViewModel!
+    
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
 
     
@@ -40,17 +42,13 @@ class SearchVC: UIViewController {
     
     @objc func pushFollowerListVC() {
         
-        guard isUsernameEntered else {
-            presentGFAlert(title: "Empty Username",
-                                       message: "Please enter a username. We need to know who to look for.",
-                                       buttonTitle: "Ok")
+        guard let username = usernameTextField.text, !username.isEmpty else {
+            presentGFAlert(title: "Empty Username", message: "Please enter a username.", buttonTitle: "Ok")
             return
         }
         
         usernameTextField.resignFirstResponder()
-        
-        let followerListVC      = FollowerListVC(username: usernameTextField.text!)
-        navigationController?.pushViewController(followerListVC, animated: true)
+        viewModel.goToFollowerList(username: usernameTextField.text!)
     }
     
     
